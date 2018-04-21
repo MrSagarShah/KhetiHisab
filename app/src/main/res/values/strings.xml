@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">KhetiHisab</string>
+
+    <!--Fragment Crop List-->
+    <string name="str_expenses">Expenses:</string>
+    <string name="str_income">Income:</string>
+    <string name="button_add_new_crop">Add Crop</string>
+
+    <!--Fragment Add Crop-->
+    <string name="button_save">Save Crop</string>
+    <string name="hint_crop_name">Crop Name</string>
+    <string name="hint_start_date">Start Date</string>
+
+    <!--Add/Update Transaction-->
+    <string name="str_amount">Amount</string>
+    <string name="str_exp">Expense</string>
+    <string name="str_inc">Income</string>
+    <string name="str_cat">Category</string>
+    <string name="str_note">Note</string>
+    <string name="str_status">Status</string>
+    <string name="str_paid">Paid</string>
+    <string name="str_unpaid">Unpaid</string>
+    <string name="str_date">Date</string>
+    <string name="str_amount_issue">Please enter the amount</string>
+    <string name="str_note_issue">Please enter the note</string>
+
+
+</resources>

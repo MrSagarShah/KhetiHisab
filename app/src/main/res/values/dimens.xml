@@ -1,0 +1,13 @@
+<resources>
+    <!--crop list-->
+    <dimen name="crop_list_title">20sp</dimen>
+    <dimen name="crop_list_text">17sp</dimen>
+    <dimen name="crop_image_dimen">80dp</dimen>
+
+    <!--add crop-->
+    <dimen name="add_crop_image_dimen">120dp</dimen>
+
+    <!--transaction list-->
+    <dimen name="transaction_image_dimen">90dp</dimen>
+
+</resources>

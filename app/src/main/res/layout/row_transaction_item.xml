@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/crop_list_text"
+        tools:text="2000" />
+
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="40dp"
+        android:textSize="@dimen/crop_list_text"
+        android:textStyle="bold"
+        tools:text="PAID/UNPAID" />
+
+    <RelativeLayout
+        android:id="@+id/rl_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/crop_image_dimen"
+        android:layout_below="@+id/tv_amount"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_crop"
+            android:layout_width="@dimen/transaction_image_dimen"
+            android:layout_height="@dimen/transaction_image_dimen"
+            android:src="@drawable/ic_place_holder" />
+
+        <TextView
+            android:id="@+id/tv_crop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/iv_crop"
+            android:maxLines="2"
+            android:textSize="@dimen/crop_list_title"
+            android:textStyle="bold"
+            tools:text="Crop Name" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_transaction"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/crop_list_text"
+        android:textStyle="bold"
+        tools:text="Notes" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tv_notes"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="@dimen/crop_list_text"
+        android:textStyle="bold"
+        tools:text="Date" />
+
+</RelativeLayout>
