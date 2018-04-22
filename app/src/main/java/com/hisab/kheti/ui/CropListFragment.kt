@@ -18,7 +18,7 @@ import com.hisab.kheti.utils.addFragmentWithBackstack
 import kotlinx.android.synthetic.main.frament_crop_list.*
 import kotlinx.android.synthetic.main.row_crop_item.view.*
 
-class CropListFragment : Fragment(), View.OnClickListener, OnItemClickEvent {
+class CropListFragment : Fragment(), View.OnClickListener, OnCropSelected {
     private var adapter: CropAdapter? = null
 
     private var cropList: MutableList<CropModel> = mutableListOf()
@@ -74,7 +74,7 @@ class CropListFragment : Fragment(), View.OnClickListener, OnItemClickEvent {
     }
 }
 
-class CropAdapter(private val cropList: MutableList<CropModel>, private val listener: OnItemClickEvent) : RecyclerView.Adapter<CropAdapter.ViewHolder>() {
+class CropAdapter(private val cropList: MutableList<CropModel>, private val listener: OnCropSelected) : RecyclerView.Adapter<CropAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent?.context)
                 .inflate(R.layout.row_crop_item, parent, false)
@@ -104,6 +104,6 @@ class CropAdapter(private val cropList: MutableList<CropModel>, private val list
     }
 }
 
-interface OnItemClickEvent {
+interface OnCropSelected {
     fun itemClicked(data: CropModel)
 }

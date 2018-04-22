@@ -49,6 +49,8 @@ interface GetDataDao {
     @Query("select * from kh_category where category_type = :type")
     fun getCategory(type : String): List<Category>
 
+    @Query("select * from kh_category")
+    fun getAllCategory(): LiveData<List<Category>>
 
     @Query("select * from kh_category where category_id = :id")
     fun getCategoryById(id : String): Category

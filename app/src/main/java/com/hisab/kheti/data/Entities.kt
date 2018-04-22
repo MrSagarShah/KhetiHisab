@@ -76,10 +76,6 @@ data class Category(
         val categoryImage: String,
         @ColumnInfo(name = "category_type")
         var transactionType: String,
-        @ColumnInfo(name = "crop_start_date")
-        val cropStartDate: Date?,
-        @ColumnInfo(name = "crop_end_date")
-        val cropEndDate: Date?,
         @Embedded
         val watcher: Watcher
 )
