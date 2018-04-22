@@ -2,8 +2,8 @@
     <string name="app_name">KhetiHisab</string>
 
     <!--Fragment Crop List-->
-    <string name="str_expenses">Expenses:</string>
-    <string name="str_income">Income:</string>
+    <string name="str_expenses">Expenses</string>
+    <string name="str_income">Income</string>
     <string name="button_add_new_crop">Add Crop</string>
 
     <!--Fragment Add Crop-->

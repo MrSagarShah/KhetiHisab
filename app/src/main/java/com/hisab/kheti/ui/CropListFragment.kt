@@ -96,10 +96,10 @@ class CropAdapter(private val cropList: MutableList<CropModel>, private val list
 
         fun bindViews(data: CropModel) {
             itemView?.tv_crop?.text = data.crop_name
-            itemView?.tv_expense?.text = itemView.context.getString(R.string.str_expenses) + (data.expense
-                    ?: 0)
-            itemView?.tv_income?.text = itemView.context.getString(R.string.str_income) + (data.income
-                    ?: 0)
+            itemView?.tv_expense_amount?.text = (data.expense
+                    ?: 0).toString()
+            itemView?.tv_income_amount?.text = (data.income
+                    ?: 0).toString()
         }
     }
 }

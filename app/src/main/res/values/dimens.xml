@@ -2,6 +2,7 @@
     <!--crop list-->
     <dimen name="crop_list_title">18sp</dimen>
     <dimen name="crop_list_text">17sp</dimen>
+    <dimen name="crop_list_text_amount">22sp</dimen>
     <dimen name="crop_image_dimen">80dp</dimen>
 
     <!--add crop-->
