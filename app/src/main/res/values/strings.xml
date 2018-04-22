@@ -34,6 +34,7 @@
     <string name="nav_categories">Categories</string>
     <string name="btn_add_category">Add Category</string>
     <string name="btn_add_crop">Add Crop</string>
+    <string name="btn_save">Save</string>
 
 
 </resources>

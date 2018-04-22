@@ -15,6 +15,7 @@ import com.hisab.kheti.R
 import com.hisab.kheti.data.Category
 import com.hisab.kheti.data.CategoryType
 import com.hisab.kheti.utils.addFragmentWithBackstack
+import com.hisab.kheti.utils.replaceFragmentWithBackStack
 import kotlinx.android.synthetic.main.frament_category_list.*
 import kotlinx.android.synthetic.main.row_category_item.view.*
 
@@ -26,21 +27,22 @@ class CategoryListFragment : Fragment(), View.OnClickListener, OnCategorySelecte
         return inflater.inflate(R.layout.frament_category_list, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupRecyclerView()
         setupListener()
-        super.onActivityCreated(savedInstanceState)
+        super.onViewCreated(view, savedInstanceState)
     }
 
+
     private fun setupRecyclerView() {
-        recycler_view.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        recycler_view.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         loadData()
     }
 
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.btn_add_category -> {
-                // TODO add the add update category fragment
+                (activity as AppCompatActivity).replaceFragmentWithBackStack(AddUpdateCategoryFragment(), R.id.fragment_container)
             }
         }
     }
@@ -48,7 +50,7 @@ class CategoryListFragment : Fragment(), View.OnClickListener, OnCategorySelecte
     override fun itemClicked(data: Category) {
         val bundle = Bundle()
         bundle.putString("CATEGORY_ID", data.categoryId)
-        // TODO add the add update category fragment
+        (activity as AppCompatActivity).replaceFragmentWithBackStack(AddUpdateCategoryFragment(), R.id.fragment_container, bundle)
     }
 
     private fun setupListener() {
@@ -56,17 +58,14 @@ class CategoryListFragment : Fragment(), View.OnClickListener, OnCategorySelecte
     }
 
     private fun loadData() {
-        App.database.getDataDao().getAllCategory().observe(activity!!, Observer<List<Category>> { t ->
+        App.database.getDataDao().getAllCategory().observe(this, Observer<List<Category>> { t ->
             if (t != null) {
                 categoryList.clear()
                 categoryList.addAll(t)
             }
-            if (adapter != null) {
-                adapter?.notifyDataSetChanged()
-            } else {
-                adapter = CategoryAdapter(categoryList, this)
-                recycler_view.adapter = adapter
-            }
+            adapter = CategoryAdapter(categoryList, this)
+            recycler_view.adapter = adapter
+
         })
     }
 }

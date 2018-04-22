@@ -43,6 +43,16 @@ fun AppCompatActivity.replaceFragment(fragment: Fragment, frameId: Int, bundle: 
     }
 }
 
+
+fun AppCompatActivity.replaceFragmentWithBackStack(fragment: Fragment, frameId: Int, bundle: Bundle? = null) {
+    supportFragmentManager.inTransaction {
+        bundle?.let {
+            fragment.arguments = it
+        }
+        replace(frameId, fragment).addToBackStack(null)
+    }
+}
+
 fun View.isVisible(isVisible: Boolean) {
     this.visibility = if (isVisible) View.VISIBLE else View.GONE
 }
