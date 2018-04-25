@@ -14,7 +14,7 @@ class App : Application() {
 
 
         val watcher = Watcher(Date(), Date(), Date())
-        App.database.getInsertUpdateDao().insert(Crop("1", "weath", "", Date(), Date(), watcher))
+        App.database.getInsertUpdateDao().insert(Crop("1", "weath", "ABC", "2 vigha", Date(), Date(), watcher))
 
         App.database.getInsertUpdateDao().insert(Category("1", CategoryEnum.CUTTER.name, "",CategoryType.EXPENSES.type, watcher))
         App.database.getInsertUpdateDao().insert(Category("2", CategoryEnum.SEED.name, "",CategoryType.EXPENSES.type, watcher))

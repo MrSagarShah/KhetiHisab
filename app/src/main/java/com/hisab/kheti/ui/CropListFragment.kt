@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.hisab.kheti.App
 import com.hisab.kheti.R
 import com.hisab.kheti.data.CropModel
@@ -29,6 +30,9 @@ class CropListFragment : Fragment(), View.OnClickListener, OnCropSelected {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         setupRecyclerView()
         setupListener()
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, CropListFragment::class.java.canonicalName)
+        FirebaseAnalytics.getInstance(activity).logEvent(FirebaseAnalytics.Event.VIEW_ITEM, bundle)
         super.onActivityCreated(savedInstanceState)
     }
 

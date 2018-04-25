@@ -34,7 +34,7 @@ interface GetDataDao {
     @Query("select * from kh_crop")
     fun getCrops(): LiveData<MutableList<Crop>>
 
-    @Query("select crop_id, crop_name, crop_image,(select sum(kh_transaction.transaction_amount) \n" +
+    @Query("select crop_id, crop_name, (select sum(kh_transaction.transaction_amount) \n" +
             "from \n" +
             "kh_transaction, kh_category \n" +
             "where kh_transaction.crop_id = crop.crop_id and kh_transaction.category_id = kh_category.category_id and kh_category.category_type =\"EXPENSES\"\n" +

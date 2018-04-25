@@ -55,8 +55,10 @@ data class Crop(
         val cropId: String,
         @ColumnInfo(name = "crop_name")
         val cropName: String,
-        @ColumnInfo(name = "crop_image")
-        val cropImage: String,
+        @ColumnInfo(name = "crop_farmer_name")
+        val farmerName: String,
+        @ColumnInfo(name = "crop_land_used_for_crop")
+        val landUsed: String,
         @ColumnInfo(name = "crop_start_date")
         val cropStartDate: Date?,
         @ColumnInfo(name = "crop_end_date")

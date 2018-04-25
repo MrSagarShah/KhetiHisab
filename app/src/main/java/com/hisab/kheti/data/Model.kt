@@ -18,7 +18,6 @@ data class TransactionData(
 data class CropModel(
         val crop_id: String,
         val crop_name: String,
-        val crop_image: String,
         val expense: String?,
         val income: String?
 )

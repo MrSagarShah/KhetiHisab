@@ -48,6 +48,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
+    // FireBase
+    implementation'com.google.firebase:firebase-core:12.0.1'
+
     // Networking
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
 
@@ -66,3 +69,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+apply plugin: 'com.google.gms.google-services'

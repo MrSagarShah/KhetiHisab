@@ -5,36 +5,66 @@
     android:background="@android:color/white"
     android:gravity="center">
 
-    <ImageView
-        android:id="@+id/iv_crop"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ic_place_holder" />
-
-    <EditText
-        android:id="@+id/et_name"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_crop"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:hint="@string/hint_crop_name" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_add_crop"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/tv_date"
-        android:focusable="false"
-        android:clickable="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et_name"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:hint="@string/hint_start_date"
-        android:inputType="date" />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_crop_name" />
+
+        <EditText
+            android:id="@+id/etFarmerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/str_farmer_name" />
+
+
+        <EditText
+            android:id="@+id/etLandUsed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/str_land_used_for_crop" />
+
+        <EditText
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/hint_start_date"
+            android:inputType="date" />
+
+
+        <EditText
+            android:id="@+id/tvCompletionDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/hint_completion_date_of_crop"
+            android:inputType="date" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_add_crop"
@@ -42,6 +72,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/button_save" />
-
 
 </RelativeLayout>
