@@ -60,7 +60,7 @@ interface GetDataDao {
     fun getTransactionsById(transactionId: String?): Transaction
 
     @Query("select transaction_id as id,transaction_status as status, transaction_amount as amount,\n" +
-            "transaction_note as notes, transaction_date as date, category_name, category_image\n" +
+            "transaction_note as notes, transaction_date as date, category_name, category_image, category_type as type\n" +
             "from kh_transaction,kh_category where crop_id = :cropId and kh_transaction.category_id = kh_category.category_id")
     fun getTransactionsNew(cropId: String?): LiveData<MutableList<TransactionData>>
 }

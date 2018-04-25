@@ -12,7 +12,8 @@ data class TransactionData(
         val notes: String?,
         val date: Date?,
         val category_name: String?,
-        val category_image: String?
+        val category_image: String?,
+        val type: String?
 )
 
 data class CropModel(

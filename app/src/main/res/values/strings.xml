@@ -38,6 +38,7 @@
     <string name="str_farmer_name">Farmer Name</string>
     <string name="str_land_used_for_crop">Land Used for Crop</string>
     <string name="hint_completion_date_of_crop">Completion Date of Crop</string>
+    <string name="add_transaction">Add Transaction</string>
 
 
 </resources>

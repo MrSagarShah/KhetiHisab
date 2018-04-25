@@ -117,6 +117,8 @@ class TransactionAdapter(private val transactionList: MutableList<TransactionDat
             itemView?.tv_status?.text = data.status
             itemView?.tv_notes?.text = data.notes
             itemView?.tv_date?.text = data.date?.convertDobToAppFormatDate()
+
+
         }
     }
 }
