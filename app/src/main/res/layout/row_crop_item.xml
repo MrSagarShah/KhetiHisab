@@ -80,5 +80,34 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_pnl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/str_pnl"
+                android:textColor="@color/pnl_color"
+                android:textSize="@dimen/crop_list_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_pnl_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/pnl_color"
+                android:textSize="@dimen/crop_list_text_amount"
+                android:textStyle="bold"
+                tools:text="89999990" />
+
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>

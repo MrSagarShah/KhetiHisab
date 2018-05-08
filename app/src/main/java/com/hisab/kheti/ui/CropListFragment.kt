@@ -104,6 +104,7 @@ class CropAdapter(private val cropList: MutableList<CropModel>, private val list
                     ?: 0).toString()
             itemView?.tv_income_amount?.text = (data.income
                     ?: 0).toString()
+            itemView?.tv_pnl_amount?.text =(data.income?.toInt()?:0.minus(data.expense?.toInt()?:0)).toString()
         }
     }
 }
